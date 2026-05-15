@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lillian Miller</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0 3rem;
+    }
+
+    nav h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      padding: 4rem 0 5rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: #0f172a;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 750px;
+      color: #475569;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: #2563eb;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #1d4ed8;
+    }
+
+    .btn-secondary {
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+      background: white;
+    }
+
+    .btn-secondary:hover {
+      border-color: #2563eb;
+      color: #2563eb;
+    }
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #0f172a;
+    }
+
+    .about {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.75rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    .card p {
+      color: #475569;
+    }
+
+    footer {
+      padding: 3rem 0;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <nav>
+      <h2>Lillian Miller</h2>
+
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <h1>
+        Climate Science, Ocean Ecology, and Carbon Cycling Research
+      </h1>
+
+      <p>
+        I am a PhD student in Earth and Environmental Sciences at the University of Pennsylvania studying ocean ecology and biogeochemistry in climate models. My work focuses on understanding how marine ecosystems and carbon cycling respond to climate change, particularly in the Southern Ocean.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-secondary" href="https://github.com/YOURUSERNAME" target="_blank">GitHub</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+
+      <div class="about">
+        <p>
+          My research combines climate modeling, ocean biogeochemistry, and ecological analysis to better understand how changing ocean conditions affect marine ecosystems and the global carbon cycle. I am particularly interested in Southern Ocean ecosystem dynamics, phytoplankton community structure, and the role of the ocean in climate mitigation.
+        </p>
+
+        <br>
+
+        <p>
+          Beyond research, I am passionate about science communication, environmental policy, and connecting scientific research to public decision-making.
+        </p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+
+      <div class="projects">
+        <div class="card">
+          <h3>Ocean Biogeochemistry</h3>
+          <p>
+            Investigating marine carbon cycling and nutrient dynamics within Earth system models.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Climate Modeling</h3>
+          <p>
+            Using CMIP6 climate models and machine learning methods to analyze ecosystem responses under climate change.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Southern Ocean Ecology</h3>
+          <p>
+            Studying phytoplankton dynamics and ecological shifts in rapidly changing polar systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="projects">
+        <div class="card">
+          <h3>CMIP6 Carbon Cycle Analysis</h3>
+          <p>
+            Evaluating ocean carbon uptake and ecosystem variability across coupled climate models.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Machine Learning for Ocean Ecology</h3>
+          <p>
+            Applying generalized additive models and neural networks to understand ecological drivers in marine systems.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Science Communication & Policy</h3>
+          <p>
+            Writing and advocacy focused on climate science funding, environmental justice, and marine-based climate solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <div class="about">
+        <p>
+          Email: your.email@upenn.edu
+        </p>
+
+        <p>
+          GitHub: github.com/YOURUSERNAME
+        </p>
+
+        <p>
+          LinkedIn: linkedin.com/in/YOURPROFILE
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        © 2026 Lillian Miller
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
