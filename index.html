@@ -82,6 +82,31 @@
       border: 3px solid #2563eb;
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
+    .hero-layout {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .hero-photo img {
+      width: 260px;
+      height: 260px;
+      border-radius: 20px; /* square with soft edges */
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+    
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #475569;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
 
     .buttons {
       display: flex;
@@ -200,9 +225,25 @@
     </nav>
 
     <section class="hero">
-      <div class="hero-profile">
-        <img src="profile.jpeg" alt="Lillian Miller profile photo">
+      <div class="hero-photo">
+        <img src="images/profile.jpeg" alt="Lillian Miller">
       </div>
+      <div class="hero-text">
+        <h1>Lillian Miller</h1>
+        
+        <p>
+        PhD student in Earth and Environmental Sciences at the University of Pennsylvania.
+        </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-secondary" href="https://github.com/YOURUSERNAME" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
       
       <h1>
         Climate Science, Ocean Ecology, and Carbon Cycling Research
