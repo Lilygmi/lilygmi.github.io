@@ -271,6 +271,60 @@ section h2 {
   border-radius: 5px;
 }
 
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.project-detail {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 24px rgba(11, 43, 60, 0.08);
+}
+
+.project-summary {
+  margin-bottom: 2rem;
+}
+
+.project-actions {
+  margin-bottom: 2rem;
+}
+
+.project-actions .btn {
+  min-width: 220px;
+}
+
+.project-meta {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.project-meta ul {
+  margin-top: 0.85rem;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+}
+
+.project-meta li {
+  margin-bottom: 0.9rem;
+}
+
+.project-meta a {
+  color: var(--teal-dark);
+  text-decoration: none;
+}
+
+.project-meta a:hover {
+  text-decoration: underline;
+}
+
 /* ---------- CV PAGE ---------- */
 .cv-download {
   display: flex;
