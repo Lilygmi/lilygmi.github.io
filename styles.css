@@ -281,6 +281,51 @@ section h2 {
   text-decoration: none;
 }
 
+.project-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.75rem 0 1rem;
+}
+
+.info-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 18px rgba(11, 43, 60, 0.06);
+}
+
+.info-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.info-card p {
+  color: var(--text-muted);
+  font-size: 0.97rem;
+}
+
+.project-sources {
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.project-sources em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.project-sources a {
+  color: var(--teal-dark);
+  text-decoration: none;
+}
+
+.project-sources a:hover {
+  text-decoration: underline;
+}
+
 .project-detail {
   background: var(--card-bg);
   border: 1px solid var(--border);
