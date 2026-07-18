@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
+
+:root {
+  --navy: #0b2b3c;
+  --teal: #146c70;
+  --teal-dark: #0f5458;
+  --bg: #f5f9f9;
+  --card-bg: #ffffff;
+  --border: #d7e5e3;
+  --text: #1e2f33;
+  --text-muted: #52696c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  color: var(--navy);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ---------- NAV ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.nav-logo {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--teal);
+}
+
+.nav-links a.active {
+  color: var(--teal-dark);
+  border-bottom-color: var(--teal);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+/* ---------- WAVE DIVIDER (signature element) ---------- */
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: 28px;
+  margin: 0 0 2rem;
+}
+
+.wave-divider path {
+  stroke: var(--teal);
+  opacity: 0.55;
+}
+
+/* ---------- HERO (home page only) ---------- */
+.hero {
+  padding: 3rem 0 2.5rem;
+}
+
+.hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-photo img {
+  width: 240px;
+  height: 240px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 28px rgba(11, 43, 60, 0.14);
+  flex-shrink: 0;
+}
+
+.hero-text h1 {
+  font-size: 2.75rem;
+  line-height: 1.15;
+  margin-bottom: 0.9rem;
+}
+
+.hero-text .tagline {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--teal-dark);
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.08rem;
+  max-width: 600px;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- BUTTONS ---------- */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--teal);
+  color: white;
+  border-color: var(--teal);
+}
+
+.btn-primary:hover {
+  background-color: var(--teal-dark);
+  border-color: var(--teal-dark);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--card-bg);
+}
+
+.btn-secondary:hover {
+  border-color: var(--teal);
+  color: var(--teal-dark);
+}
+
+.btn-cv {
+  border: 1px solid var(--teal);
+  color: var(--teal-dark);
+  background: var(--card-bg);
+  padding: 0.55rem 1.1rem;
+  font-size: 0.9rem;
+}
+
+.btn-cv:hover {
+  background: var(--teal);
+  color: white;
+}
+
+/* ---------- SECTIONS / CARDS ---------- */
+section {
+  margin-bottom: 4rem;
+}
+
+.page-header {
+  padding: 2.5rem 0 0.5rem;
+}
+
+.page-header h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.page-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 640px;
+}
+
+section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-block {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.about-block p + p {
+  margin-top: 1.1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.75rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 3px 14px rgba(11, 43, 60, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(11, 43, 60, 0.09);
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  color: var(--text-muted);
+}
+
+.card-draft-note {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  background: #e8f2f2;
+  padding: 0.2rem 0.55rem;
+  border-radius: 5px;
+}
+
+/* ---------- CV PAGE ---------- */
+.cv-download {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+  flex-wrap: wrap;
+}
+
+.cv-section {
+  margin-bottom: 2.5rem;
+}
+
+.cv-section h2 {
+  font-size: 1.3rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.cv-entry {
+  margin-bottom: 1.1rem;
+}
+
+.cv-entry .cv-role {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.cv-entry .cv-meta {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.cv-placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.92rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+footer p {
+  margin-bottom: 0.4rem;
+}
+
+footer a {
+  color: var(--teal-dark);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .copyright {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #7c8f92;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-text p {
+    max-width: none;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
